@@ -1,0 +1,13 @@
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\bin\Debug\Scraper.exe.config
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\bin\Debug\Scraper.exe
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\bin\Debug\Scraper.pdb
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\bin\Debug\HtmlAgilityPack.dll
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\bin\Debug\HtmlAgilityPack.xml
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.Form1.resources
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.Properties.Resources.resources
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.csproj.GenerateResource.Cache
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.csproj.CoreCompileInputs.cache
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.exe
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.pdb
+C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.csprojResolveAssemblyReference.cache
