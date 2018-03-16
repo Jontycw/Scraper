@@ -17,18 +17,20 @@ namespace Scraper
     public partial class Scraper : Form
     {
         public Timer timer;
+        HttpClient _client = new HttpClient();
 
         public static string[] Urls = LoadUrls();
 
         public Scraper()
         {
             InitializeComponent();
+            _client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             SetupUrlTextArea(Urls);
-            InitialLoopUrl(Urls);
+            await InitialLoopUrl(Urls);
         }
 
         public void InitTimer()
@@ -53,14 +55,11 @@ namespace Scraper
             }
         }
 
-        public async void loopUrl(string[] Urls)
+        public async Task loopUrl(string[] Urls)
         {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
-
             foreach (string url in Urls)
             {
-                var html = await Task.Factory.StartNew(() => client.GetStringAsync(url).Result);
+                var html = await _client.GetStringAsync(url);
                 HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
                 htmlDocument.LoadHtml(html);
 
@@ -77,14 +76,11 @@ namespace Scraper
             }
         }
 
-        public async void InitialLoopUrl(string[] Urls)
+        public async Task InitialLoopUrl(string[] Urls)
         {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
-
             foreach (string url in Urls)
             {
-                var html = await Task.Factory.StartNew(() => client.GetStringAsync(url).Result);
+                var html = await _client.GetStringAsync(url);
                 HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
                 htmlDocument.LoadHtml(html);
 
@@ -101,10 +97,10 @@ namespace Scraper
             }
         }
 
-        private void RunBtn_Click(object sender, EventArgs e)
+        private async void RunBtn_Click(object sender, EventArgs e)
         {
             InitTimer();
-            loopUrl(Urls);
+            await loopUrl(Urls);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -11,3 +11,16 @@ C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\S
 C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.exe
 C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.pdb
 C:\Users\jonty\Documents\Visual Studio 2017\Projects\Scraper\Scraper\obj\Debug\Scraper.csprojResolveAssemblyReference.cache
+D:\working\Scraper\Scraper\bin\Debug\Scraper.exe.config
+D:\working\Scraper\Scraper\bin\Debug\Scraper.exe
+D:\working\Scraper\Scraper\bin\Debug\Scraper.pdb
+D:\working\Scraper\Scraper\bin\Debug\HtmlAgilityPack.dll
+D:\working\Scraper\Scraper\bin\Debug\HtmlAgilityPack.pdb
+D:\working\Scraper\Scraper\bin\Debug\HtmlAgilityPack.xml
+D:\working\Scraper\Scraper\obj\Debug\Scraper.Scraper.resources
+D:\working\Scraper\Scraper\obj\Debug\Scraper.Properties.Resources.resources
+D:\working\Scraper\Scraper\obj\Debug\Scraper.csproj.GenerateResource.cache
+D:\working\Scraper\Scraper\obj\Debug\Scraper.csproj.CoreCompileInputs.cache
+D:\working\Scraper\Scraper\obj\Debug\Scraper.csproj.CopyComplete
+D:\working\Scraper\Scraper\obj\Debug\Scraper.exe
+D:\working\Scraper\Scraper\obj\Debug\Scraper.pdb
