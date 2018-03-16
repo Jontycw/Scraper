@@ -17,12 +17,14 @@ namespace Scraper
     public partial class Scraper : Form
     {
         public Timer timer;
+        HttpClient _client = new HttpClient();
 
         public static string[] Urls = LoadUrls();
 
         public Scraper()
         {
             InitializeComponent();
+            _client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
         }
 
         private async void Form1_Load(object sender, EventArgs e)
@@ -55,12 +57,9 @@ namespace Scraper
 
         public async Task loopUrl(string[] Urls)
         {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
-
             foreach (string url in Urls)
             {
-                var html = await client.GetStringAsync(url);
+                var html = await _client.GetStringAsync(url);
                 HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
                 htmlDocument.LoadHtml(html);
 
@@ -79,12 +78,9 @@ namespace Scraper
 
         public async Task InitialLoopUrl(string[] Urls)
         {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
-
             foreach (string url in Urls)
             {
-                var html = await client.GetStringAsync(url);
+                var html = await _client.GetStringAsync(url);
                 HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
                 htmlDocument.LoadHtml(html);
 
